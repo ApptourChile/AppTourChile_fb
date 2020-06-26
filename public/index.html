@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Faster+One&display=swap" rel="stylesheet">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.parallax');
+            var instances = M.Parallax.init(elems);
+
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.slider');
+            var instances = M.Slider.init(elems, {
+                height: 360,
+                indicators: true,
+                interval: 2000
+            });
+
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.carousel');
+            var instances = M.Carousel.init(elems, {
+                fullWidth: true,
+                dist: -200,
+                indicators: true,
+                height: 200
+
+
+            });
+
+
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.datepicker');
+            var instances = M.Datepicker.init(elems, {
+
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.timepicker');
+            var instances = M.Timepicker.init(elems, {
+
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.collapsible');
+            var instances = M.Collapsible.init(elems, {
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.materialboxed');
+            var instances = M.Materialbox.init(elems);
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.fixed-action-btn');
+            var instances = M.FloatingActionButton.init(elems, {
+                direction: 'up'
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems, {
+
+            });
+        });
+
+    </script>
+
+
+</head>
+
+<body class="lime darken-2" style="background: url('../img/FONDOS/bambo.png'); font-family: 'Calistoga', cursive;">
+  
+
+    <noscript>
+
+    </noscript>
+    <div id="app">
+
+    </div>
+    <!-- built files will be auto injected -->
+
+    <footer class="light-grey" style="background: url('../img/FONDOS/linen.png'); font-family: 'Calistoga', cursive;">
+        <br>
+        <div class="row green-text text-darken-4">
+            <div class="col l4 center">
+                <h5>Metodos de pago</h5>
+                <img src="../img/ICONOS/WebPay.png" width="250px" height="120px">
+            </div>
+            <div class="col l4 s12 center">
+                <div class="col l12 center green-text text-darken-4">
+                    <img src="../img/ICONOS/logo_app.png" alt="responsive-img" width="100" height=100>
+                    <div class="col l12 green-text text-darken-4">
+                        <h5 class="">AppTour Chile</h5>
+                    </div>
+                    <p class="green-text text-darken-4">Dedicados siempre a entregar lo mejor a nuestros clientes,
+                        con un buen servicio, precios y calidad.</p>
+                </div>
+            </div>
+            <div class="col l4 center green-text text-darken-4">
+                <h5 class="">Redes Sociales</h5>
+                <ul class="centered">
+                    <li><a class="green-text text-darken-4" href="https://web.whatsapp.com"><img
+                                src="../img/ICONOS/whatsapp.png" width="20" height="20">Whatsapp</a>
+                    </li>
+                    <li><a class="green-text text-darken-4" href="https://www.facebook.com"><img
+                                src="../img/ICONOS/facebook.png" width="20" height="20">Facebook</a>
+                    </li>
+                    <li><a class="green-text text-darken-4" href="https://www.instagram.com/"><img
+                                src="../img/ICONOS/instagram.png" width="20" height="20">Instagram</a></li>
+                    <li><a class="green-text text-darken-4" href="https://www.twitter.com/"><img
+                                src="../img/ICONOS/twiter.png" width="20" height="20">Twitter</a></li>
+                    <li><a class="green-text text-darken-4" href="https://www.youtube.com/"><img
+                                src="../img/ICONOS/youtube.png" width="20" height="20">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copyright green-text text-darken-4">
+            <div class="container center">
+                <h7> © Copyright 2020 | AppTour Chile. Todos los derechos reservados | Desarrollado por
+                    Nicolas Saavedra Diaz y Eduardo Jorquera Navarrete.</h7>
+                <a class="green-text text-darken-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
