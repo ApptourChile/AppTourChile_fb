@@ -3,7 +3,6 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import firebase from "firebase/firebase-app"
-import GoogleMapLoader from "./components/GoogleMapLoader"
 
 Vue.config.productionTip = false
 

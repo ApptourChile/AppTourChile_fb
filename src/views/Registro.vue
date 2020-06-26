@@ -11,6 +11,7 @@
         <br />
         <h1>google maps</h1>
         <GoogleMapLoader></GoogleMapLoader>
+        <br><br><br>
         <div class="col l6 offset-l3">
           <div
             class="card-panel light z-depth-5"
@@ -95,7 +96,6 @@
 
 
 <script>
-import GoogleMapLoader from "@/components/GoogleMapLoader"
 import { mapActions, mapState } from "vuex";
 import app from "../firebase";
 export default {

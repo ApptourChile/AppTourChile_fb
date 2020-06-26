@@ -18,36 +18,3 @@
     </template>
   </GoogleMapLoader>
 </template>
-
-<script>
-import GoogleMapLoader from "@/components/GoogleMapLoader";
-//import { LINE_PATH_CONFIG } from "@/constants/mapSettings";
-
-export default {
-  components: {
-    GoogleMapLoader
-  },
-  props: {
-    google: {
-      type: Object,
-      required: true
-    },
-    map: {//profe no srra por el npm de map yo lo instale pero me sigue saliendo
-      type: Object,
-      required: true
-    },
-    path: {
-      type: Array,
-      required: true
-    }
-  },
-
-  mounted() {
-    new this.google.maps.Polyline({
-      path: this.path,
-      map: this.map,
-      //...LINE_PATH_CONFIG
-    });
-  }
-};
-</script>
