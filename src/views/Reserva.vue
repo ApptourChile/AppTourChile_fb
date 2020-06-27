@@ -4,11 +4,13 @@
 
             {{t.nombreAnimal}}
             {{t.nombre}}
+            {{t.id.A1.nombreCientifico}}
     </div>
 </template>
+
 <script>
-import { mapActions, mapState } from "vuex";
-import app from "../firebase";
+import { mapActions, mapState } from "vuex"
+import app from "../firebase"
 export default {
   name: "ReservaFloraFauna",
   components: {},

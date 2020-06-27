@@ -90,7 +90,7 @@
 
 
 <script>
-import app from "../firebase";
+import app from "../firebase"
 export default {
   name: "Editar",
   data: () => ({

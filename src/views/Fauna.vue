@@ -82,8 +82,8 @@
 </template>
 
 <script>
-import { mapActions, mapState } from "vuex";
-import app from "../firebase";
+import { mapActions, mapState } from "vuex"
+import app from "../firebase"
 export default {
   name: "Fauna",
   components: {},

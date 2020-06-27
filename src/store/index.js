@@ -83,6 +83,7 @@ export default new Vuex.Store({
     getReservas({commit}){
       console.log('get');
       const list4 =[]
+     // app.database().ref("ReservaFloraFauna").child('R1')
       app.database().ref("Reserva").on("value",data=>{
         //limpiar la coleccion
         for(var i=list4.length -1 ; i>=0; i--){
@@ -101,3 +102,28 @@ export default new Vuex.Store({
   modules: {
   }
 })
+/**
+R1:{
+  animales:{
+    A1:{
+      nombre:'',
+    },
+    A2:{
+      nombre:''
+    }
+  },
+  faunas:{
+    F1:{
+      especie:'sad',
+      clima:
+    },
+    F2:{
+
+    }
+  }
+},
+*/
+//app.database().ref("ReservaFloraFanua").child("R1")
+
+//li.animales
+//li.faunas

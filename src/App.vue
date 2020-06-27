@@ -55,9 +55,9 @@
               </router-link>
             </li>
             <li>
-              <router-link to="/locomocion" class="green-text text-darken-4 right">
+              <router-link to="/login" class="green-text text-darken-4 right">
                 <i class="green-text text-darken-4 material-icons right">directions_bus</i>
-                <b>Locomoción</b>
+                <b>Mapa</b>
                 <!--LOCOMOCION-->
               </router-link>
             </li>
