@@ -1,4 +1,4 @@
-<template>
+ <!-- Comment  <template>
   <GoogleMapLoader :mapConfig="mapConfig" apiKey="AIzaSyB_C-CIobR1FS3Yb7FNk3BDC-ZMQQ3oy7c">
     <template slot-scope="{ google, map }">
       <GoogleMapMarker
@@ -18,3 +18,4 @@
     </template>
   </GoogleMapLoader>
 </template>
+-->

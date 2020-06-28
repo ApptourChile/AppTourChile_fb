@@ -1,14 +1,17 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-
+import router from '../router/index';
 import app from '../firebase'
+
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
-    turistas:[{
-      }]
+  state: {  
+    turistas:[{ }],
+     
+      user:'',
+      error:''
   },
   mutations: {
     setTuristas(state,value){
@@ -26,9 +29,39 @@ export default new Vuex.Store({
     setReservas(state,value){
       state.reservas = value;
       //console.log('RESERVA',state.reservas); 
+    },
+    setUser(state,value){
+      state.user = value;
+    },
+    setError(state,value   ){
+      state.error = value;
     }
   },
   actions: {
+    iniciarSesion({commit},user){
+      app.auth().signInWithEmailAndPassword(user.email,user.pass)
+      .then(res=>{
+        console.log(res.user)
+        commit.log(res.user)
+        commit("setUser",{email:res.user.email, uid:res.user.uid})
+        router.push({name:'Home'})
+      })
+      .catch(e=>{
+        console.log(e.message)
+        commit("setError",e.message);
+      })
+    },
+    cerrarSesion({commit}){
+      app.auth().signOut()
+      .then(res=>{
+        console.log('adios')
+        router.push({name:'login'})
+      })
+      .catch(e=>{
+        console.log(e);
+        commit('setError',e.message);
+      });
+    },
     getTuristas({commit}){
       const list =[]
       app.database().ref("turista").on("value",data=>{

@@ -9,8 +9,8 @@
         <br />
         <br />
         <br />
-        <h1>google maps</h1>
-        <GoogleMapLoader></GoogleMapLoader>
+    
+       
         <br><br><br>
         <div class="col l6 offset-l3">
           <div
@@ -101,9 +101,7 @@ import app from "../firebase";
 export default {
   name: "Registro",
   components: {
-    GoogleMapLoader,
-    GoogleMapMarker,
-    GoogleMapLine
+
   },
   data: () => ({
     nombre: "",
@@ -138,54 +136,56 @@ export default {
 };
 </script>
 
+
+
 <script>
-import GoogleMapLoader from "@/components/GoogleMapLoader";
-import { mapSettings } from "@/constants/mapSettings";
+//import GoogleMapLoader from "@/components/GoogleMapLoader";
+//import { mapSettings } from "@/constants/mapSettings";
 
-export default {
-  components: {
-    GoogleMapLoader,
-    GoogleMapMarker,
-    GoogleMapLine
-  },
+//export default {
+  //components: {
+    //GoogleMapLoader,
+    //GoogleMapMarker,
+    //GoogleMapLine
+  //},
 
-  data() {
-    return {
-      markers: [
-        { id: "a", position: { lat: 3, lng: 101 } },
-        { id: "b", position: { lat: 5, lng: 99 } },
-        { id: "c", position: { lat: 6, lng: 97 } }
-      ],
-      lines: [
-        {
-          id: "1",
-          path: [
-            { lat: 3, lng: 101 },
-            { lat: 5, lng: 99 }
-          ]
-        },
-        {
-          id: "2",
-          path: [
-            { lat: 5, lng: 99 },
-            { lat: 6, lng: 97 }
-          ]
-        }
-      ]
-    };
-  },
+ // data() {
+   // return {
+    // markers: [
+      //  { id: "a", position: { lat: 3, lng: 101 } },
+      //  { id: "b", position: { lat: 5, lng: 99 } },
+      //  { id: "c", position: { lat: 6, lng: 97 } }
+    //  ],
+     // lines: [
+     //   {
+      //    id: "1",
+       //   path: [
+        //    { lat: 3, lng: 101 },
+        //    { lat: 5, lng: 99 }
+       //   ]
+     //   },
+     //   {
+       //   id: "2",
+        //  path: [
+         //   { lat: 5, lng: 99 },
+         //   { lat: 6, lng: 97 }
+        //  ]
+      //  }
+     // ]
+   // };
+ // },
 
-  computed: {
-    mapConfig() {
-      return {
-        ...mapSettings,
-        center: this.mapCenter
-      };
-    },
+  //computed: {
+   // mapConfig() {
+    //  return {
+       // ...mapSettings,
+      //  center: this.mapCenter
+     // };
+   // },
 
-    mapCenter() {
-      return this.markers[1].position;
-    }
-  }
-};
+   // mapCenter() {
+     // return this.markers[1].position;
+    //}
+ // }
+//};
 </script>

@@ -1,3 +1,4 @@
+<!-- Comment
 <template>  
     <form class="col s12 l10 offset-l1">
       <div class="row">
@@ -16,3 +17,4 @@
       </div>
     </form>
 </template>
+ -->

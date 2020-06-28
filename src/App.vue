@@ -60,7 +60,18 @@
                 <b>Locomoción</b>
                 <!--LOCOMOCION-->
               </router-link>
+                <li>
+              <router-link to="/login" class="green-text text-darken-4 right">
+                <i class="green-text text-darken-4 material-icons right">directions_bus</i>
+                <b>Login</b>
+                <!--LOCOMOCION-->
+              </router-link>
+            
             </li>
+           <li>
+                <a href="#" @click="cerrarSesion">salir</a>
+           </li>
+        
           </ul>
           <ul class="sidenav" id="mobile-demo">
             <li>
@@ -116,6 +127,7 @@
                 <!--LOCOMOCION-->
               </router-link>
             </li>
+           
           </ul>
         </div>
       </nav>
@@ -138,3 +150,19 @@
       <router-view />
     </div>
 </template>
+
+<script>
+import {mapActions,mapState} from 'vuex'
+export default {
+  name: 'app',
+  data:()=>({
+
+  }),
+  methods:{
+     ...mapActions(['cerrarSesion'])
+  },
+  computed:{
+    ...mapState(['error'])
+  }
+}
+</script>>

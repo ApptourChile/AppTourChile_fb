@@ -74,7 +74,16 @@ Vue.use(VueRouter)
     // this generates a separate chunk (reserva.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "reserva" */ '../views/Reserva.vue')
-  }
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    // route level code-splitting
+    // this generates a separate chunk (perfil.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "perfil" */ '../views/Login.vue')
+  },
+  
 ]
 
 const router = new VueRouter({

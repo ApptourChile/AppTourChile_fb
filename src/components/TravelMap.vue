@@ -1,3 +1,4 @@
+<!-- Comment 
 <template>
   <GoogleMapLoader
     :mapConfig="mapConfig"
@@ -22,3 +23,4 @@ export default {
   },
 }
 </script>
+-->
