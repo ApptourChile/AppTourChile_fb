@@ -1,7 +1,7 @@
 <template>
   <CargarMapa
     :configMapa="configMapa"
-    apiKey="AIzaSyC_QdNly-S8NVTVD_jV3Ann3lHJe3oH674"
+    apiKey="AIzaSyDwJ0p_DPg_F8r_xXSmvcXIbvBZ50Cghos"
   >
  
     <template slot-scope="{ google, map }">

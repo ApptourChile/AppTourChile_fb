@@ -1,23 +1,19 @@
 <template>
     <div>
         <div>
-            <Mapa class="mapa">
-                
-            </Mapa>
+            <Mapa class="mapa"></Mapa>
         </div>
 
     </div>
 </template>
 
 <script>
-import Mapa from "@/components/Mapa"
+import Mapa from "../components/Mapa"
 import { mapActions, mapState } from "vuex"
-import app from "@/firebase"
 export default {
     name: "MostrarMap",
     components:{
-        Map,
-        App
+        Mapa
     }
     
 }

@@ -1,6 +1,6 @@
 const configMapa = {
-    clickableIcons: false,
-    streetViewControl: false,
+    clickableIcons: true,
+    streetViewControl: true,
     panControlOptions: false,
     gestureHandling: "cooperative",
     mapTypeControl: false,
