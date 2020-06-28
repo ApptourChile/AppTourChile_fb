@@ -1,8 +1,16 @@
 <template>
     <div>
+        <br><br><br>
         <div>
-            <Mapa class="mapa"></Mapa>
+            <div class="container center">
+                <div class="row">
+                    <h3>Reservas Nacionales</h3>
+                </div>
+                <Mapa class="mapa"></Mapa>
+            </div>
+            
         </div>
+        <br>
 
     </div>
 </template>
