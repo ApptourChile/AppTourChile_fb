@@ -20,8 +20,8 @@
  
 <script>
  
-  import CargarMapa from "@/components/CargarMapa"
-  import Marcadores from "@/components/Marcadores"
+  import CargarMapa from "./CargarMapa"
+  import Marcadores from "./Marcadores"
   import { configMapa } from "@/constants/configMapa"
   export default {
     components: {

@@ -8,6 +8,7 @@ import Login from '../views/Login.vue'
 import Reserva from '../views/Reserva.vue'
 import Flora from '../views/Flora.vue'
 import Fauna from '../views/Fauna.vue'
+import MostrarMap from '../views/MostrarMap.vue'
 
 Vue.use(VueRouter)
 
@@ -49,6 +50,15 @@ Vue.use(VueRouter)
     // this generates a separate chunk (registro.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "registro" */ '../views/Registro.vue')
+  },
+  {
+    path: '/verMapa',
+    name: 'MostarMap',
+    // route level code-splitting
+    // this generates a separate chunk (verMapa.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "verMapa" */ '../views/MostrarMap.vue'),
+    meta: {requiresAuth: true},
   },
   {
     path: '/editar/:id',

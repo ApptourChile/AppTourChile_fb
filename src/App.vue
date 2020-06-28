@@ -36,6 +36,13 @@
                 <!--Fauna-->
               </router-link>
             </li>
+            <li>
+              <router-link to="/verMapa" class="green-text text-darken-4 right">
+                <i class="green-text text-darken-4 material-icons right">gps</i>
+                <b>Mapa</b>
+                <!--Fauna-->
+              </router-link>
+            </li>
           </ul>
           <ul class="right">
             <li>
