@@ -3,7 +3,7 @@
         <br> <br>
          <br>
           <br>
-           
+           <br>
             <div class="row">
                 <div class="col col l6 offset-l3">
                 <div class="card-panel ">
@@ -12,7 +12,7 @@
                         <input type="password" placeholder="CONTRASEÑA"  v-model="pass">
 
 
-                        <button class="btn">ENTRAR
+                        <button class="btn">Entrar al menu
 
 
                         </button>
@@ -45,4 +45,4 @@ export default {
         ...mapState(['user'])
     },
 }
-</script>> 
+</script>
