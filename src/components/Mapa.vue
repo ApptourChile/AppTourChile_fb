@@ -34,14 +34,25 @@
         markers: [
           {
             id: "0",
-            position: { lat: -13.1583635, lng: -72.603623 },
-            title: "Machu Pichu - Cusco"
+            position: { lat: -33.45694, lng: -70.64827 },
+            title: "Region Metropolitana"
           },
           {
             id: "1",
-            position: { lat: -12.025827, lng: -77.2679817 },
-            title: "Lima - Perú"
+            position: { lat: -35.5000000, lng: -71.5000000 },
+            title: "Region VII"
+          },
+          {
+            id: "2",
+            position: { lat: -38.73965, lng: -72.59842},
+            title: "Region Temuco"
+          },
+          {
+            id: "3",
+            position: { lat: -41.4693, lng: -72.94237 },
+            title: "Region Puerto Montt"
           }
+
         ]
       };
     },

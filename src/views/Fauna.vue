@@ -12,7 +12,7 @@
 
       <table
         class="green-text text-darken-4"
-        style="margin:0 auto; width:550px; font-family: 'Calistoga', cursive;"
+        style="margin:0 auto; width:600px; font-family: 'Calistoga', cursive;"
       >
         <tr v-for="t in faunas" :key="t.id" class="center">
           <div class="col l4 offset-l1">
@@ -24,15 +24,14 @@
                 <div class="card-image waves-effect waves-block waves-light">
                   <img
                     class="activator"
-                    src="../assets/img/ICONOS/telo.jpeg"
-                    width="345"
-                    height="250"
+                    src="../assets/img/AVES/MARTINPESCADOR.jpg"
+                    width="500px"
+                    height="300px"
                   />
                 </div>
                 <div class="card-content center">
                   <span class="card-title activator">
-                    {{t.nombreAnimal}}
-                    <i class="material-icons right">pets</i>
+                    <i class="material-icons">pets</i>{{t.nombreAnimal}}
                   </span>
                   <p>
                     <a href="#">{{t.nombreCientifico}}</a>
@@ -49,26 +48,29 @@
                           <i class="material-icons left black-text">reply</i>
                         </span>
                       </div>
-                      <div class="col l11 center">
+                      <div class="col l11">
+
+                      </div>
+                    </div>
+                      <div class="col l12 center">
                         <span class="card-title green-text text-darken-4">
-                          <b>{{t.nombreAnimal}}</b>
+                          <h5>{{t.nombreAnimal}}</h5>
                         </span>
                       </div>
                       <div class="col l12 center">
-                        <h7>Descripcion:</h7>
+                        <h6>Descripcion:</h6>
                         <p class="black-text">{{t.Descripcion}}</p>
-                        <h7>Alimentacion:</h7>
+                        <h6>Alimentacion:</h6>
                         <p class="black-text">{{t.Alimentacion}}</p>
-                        <h7>Estado de Conservacion:</h7>
+                        <h6>Estado de Conservacion:</h6>
                         <p class="black-text">{{t.EstadoConservacion}}</p>
                         <br>
                         <img src="../assets/img/peligro.jpg" width="300" height="200">
                         <br>
-                        <h7>Habitat:</h7>
+                        <h6>Habitat:</h6>
                         <p class="black-text">{{t.habitat}}</p>
                         
                       </div>
-                    </div>
                   </div>
                 </div>
               </div>

@@ -37,7 +37,7 @@
           </li>
           <li>
             <router-link to="/verMapa" class="green-text text-darken-4 right">
-              <i class="green-text text-darken-4 material-icons right">gps</i>
+              <i class="green-text text-darken-4 material-icons right">gps_fixed</i>
               <b>Mapa</b>
               <!--Fauna-->
             </router-link>
@@ -62,8 +62,8 @@
           </li>
           <li>
             <router-link to="/login" class="green-text text-darken-4 right">
-              <i class="green-text text-darken-4 material-icons right">directions_bus</i>
-              <b>Mapa</b>
+              <i class="green-text text-darken-4 material-icons right">account_circle</i>
+              <b>Iniciar Sesion</b>
               <!--LOCOMOCION-->
             </router-link>
           </li>

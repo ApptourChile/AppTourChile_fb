@@ -1,7 +1,7 @@
 <template>
-    <div class="reserva center">
+    <div >
+      <br><br><br>
             <h1>RESERVA</h1>
-
             {{t.nombreAnimal}}
             {{t.nombre}}
             {{t.id.A1.nombreCientifico}}
@@ -12,8 +12,10 @@
 import { mapActions, mapState } from "vuex"
 import app from "../firebase"
 export default {
-  name: "ReservaFloraFauna",
-  components: {},
+  name: "Reserva",
+  components: {
+      
+  },
   data: () => ({
     reserva: {}
   }),

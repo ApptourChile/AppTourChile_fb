@@ -6,7 +6,7 @@
                 <div class="row">
                     <h3>Reservas Nacionales</h3>
                 </div>
-                <Mapa class="mapa"></Mapa>
+                <Mapa class="mapa center"></Mapa>
             </div>
             
         </div>
@@ -28,7 +28,7 @@ export default {
 </script>
 <style scoped>
   .mapa { 
-    height: 425px;
-    border: 5px solid red;
+    height: 550px;
+    width: 350px;
   }
 </style>
