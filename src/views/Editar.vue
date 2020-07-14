@@ -1,5 +1,6 @@
 <template>
-  <div class="editar center">
+  <div class="editar">
+    <Barra id="app"></Barra>
     <br />
     <br />
     <br />
@@ -7,112 +8,133 @@
       <div class="container">
         <div class="col l6 offset-l3">
           <div
-            class="card-panel light z-depth-5"
+            class="card-panel light z-depth-5 center"
             style="padding:5%;background: url('img/FONDOS/linen.png'); border-radius:15%; width:500px; heigth:600px"
           >
             <h3 class="green-text text-darken-4">Editar Perfil</h3>
-            <form @submit.prevent="editar()" style="margin:0 auto; width:300px;">
+            <form @submit.prevent="editar" style="margin:0 auto; width:300px;" class="center">
+              <label class="green-text text-darken-4 left" for="first_name">
+                <b>Nombre</b>
+              </label>
               <input
                 class="green-text text-darken-4"
                 style="font-family: 'Calistoga', cursive;"
                 type="text"
-                v-model="turista.nombre"
+                v-model="user.nombre"
                 placeholder="Nombre"
               />
               <br />
+              <label class="green-text text-darken-4 left" for="first_name">
+                <b>Apellido Paterno</b>
+              </label>
               <input
                 class="green-text text-darken-4"
                 style="font-family: 'Calistoga', cursive;"
                 type="text"
-                v-model="turista.apellidoP"
+                v-model="user.apellidoPaterno"
                 placeholder="Apellido paterno"
               />
               <br />
+              <label class="green-text text-darken-4 left" for="first_name">
+                <b>Apellido Materno</b>
+              </label>
               <input
                 class="green-text text-darken-4"
                 style="font-family: 'Calistoga', cursive;"
                 type="text"
-                v-model="turista.apellidoM"
+                v-model="user.apellidoMaterno"
                 placeholder="Apellido materno"
               />
               <br />
-              <input
-                class="green-text text-darken-4"
-                style="font-family: 'Calistoga', cursive;"
-                type="number"
-                v-model="turista.edad"
-                placeholder="Edad"
-              />
-              <br />
-              <span class="white-text" style="font-family: 'Calistoga', cursive;">Sexo:</span>
-              <p>
-                <label>
-                  <input v-model="turista.sexo" class="with-gap" name="group1" type="radio" checked />
-                  <span class="white-text" style="font-family: 'Calistoga', cursive;">Mujer</span>
-                </label>
-
-                <label>
-                  <input v-model="turista.sexo" class="with-gap" name="group1" type="radio" />
-                  <span class="white-text" style="font-family: 'Calistoga', cursive;">Hombre</span>
-                </label>
-              </p>
+              <label class="green-text text-darken-4 left" for="first_name">
+                <b>Email</b>
+              </label>
               <input
                 class="green-text text-darken-4"
                 style="font-family: 'Calistoga', cursive;"
                 type="text"
-                v-model="turista.gmail"
-                placeholder="Gmail"
+                v-model="user.email"
+                placeholder="Email"
               />
               <br />
+              <label class="green-text text-darken-4 left" for="first_name">
+                <b>Contraseña</b>
+              </label>
               <input
                 class="green-text text-darken-4"
                 style="font-family: 'Calistoga', cursive;"
                 type="password"
-                v-model="turista.clave"
-                placeholder="Clave"
+                v-model="user.pass"
+                placeholder="Contraseña"
               />
-
               <br />
-
+              <label class="green-text text-darken-4 left" for="first_name">
+                <b>Confirmar Clave</b>
+              </label>
+              <input
+                class="green-text text-darken-4"
+                style="font-family: 'Calistoga', cursive;"
+                type="password"
+                v-model="clave2"
+                placeholder="Confirme Contraseña"
+              />
               <br />
-              <button
-                class="btn green darken-4"
-                style="background: url('img/FONDOS/linen.png'); text-transform: none;font-family: 'Calistoga', cursive;"
-              >Guardar</button>
-              <br>
+              <button class="btn green darken-4">Guardar</button>
+              <br />
+              <br />
             </form>
           </div>
         </div>
       </div>
     </div>
+    <Footer></Footer>
   </div>
 </template>
 
 
 <script>
-import app from "../firebase"
+import app from "../firebase";
+import Barra from "../components/Barra";
+import Footer from "../components/Footer";
+import { mapActions, mapState } from "vuex";
 export default {
   name: "Editar",
   data: () => ({
-    turista: {}
+    user: {}
   }),
+  components: {
+    Barra,
+    Footer
+  },
   methods: {
-    editar(){
+    editar() {
       app
-      .database()
-      .ref("turista")
-      .child(this.$route.params.id)
-      .set(this.turista)
-      this.$router.push({'name': "Perfil"})
+        .database()
+        .ref("user")
+        .child(this.$route.params.id)
+        .set(this.user);
+      this.$router.push({ name: "Perfil" });
     },
     carga() {
       const ref = app
         .database()
-        .ref("turista")
+        .ref("user")
         .child(this.$route.params.id)
         .on("value", snap => {
-          this.turista = snap.val();
-          
+          this.user = snap.val();
+        });
+    },
+    guardar() {
+      app
+        .database()
+        .ref("user")
+        .push({
+          nombre: this.nombre,
+          apellidoPaterno: this.apellidoPaterno,
+          apellidoMaterno: this.apellidoMaterno,
+          pass: this.pass,
+          email: this.email,
+          clave2: this.clave2
         });
     }
   },

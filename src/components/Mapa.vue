@@ -35,7 +35,9 @@
           {
             id: "0",
             position: { lat: -33.45694, lng: -70.64827 },
-            title: "Region Metropolitana"
+            title: "Region Metropolitana",
+            title2: "asdadasdasdasdsaas sadas dsadasdas  asd asd a s  asd ad as das das   adsadasdasd a asddas asd a"
+            
           },
           {
             id: "1",

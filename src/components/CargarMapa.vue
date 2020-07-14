@@ -47,8 +47,8 @@
   };
 </script>
 <style scoped>
-  .mapa { 
-    height: 550px;
-    width: 350px;
-  }
+.mapa {
+  height: 850px;
+  width: 550px;
+}
 </style>

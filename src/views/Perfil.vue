@@ -1,91 +1,106 @@
 <template>
-  <div class="perfil center">
-    <br><br><br>
-    <div class="container  light z-depth-5" style="border-radius:15%; background: url('img/FONDOS/linen.png'); font-family: 'Calistoga', cursive;">
-    <br>
-    <h3 class="green-text text-darken-4 ">Lista Turistas</h3>
+  <div class="perfil">
+    <Barra></Barra>
+    <br />
+    <br />
+    <br />
+    <div
+      class="container center light z-depth-5"
+      style="border-radius:15%; background: url('img/FONDOS/linen.png'); font-family: 'Calistoga', cursive;"
+    >
+      <br />
+      <h3 class="green-text text-darken-4">Lista Usuarios</h3>
 
-    <table style="margin:0 auto; width:300px; font-family: 'Calistoga', cursive;">
-      <tr class="green-text text-darken-4 " >
-        <th>Nombre</th>
-        <th>Apellido Paterno</th>
-        <th>Apellido Materno</th>
-        <th>Edad</th>
-        <th>Sexo</th>
-        <th>Gmail</th>
-        <th>Clave</th>
-        <th></th>
-        <th></th>
-        
-      </tr>
-      <tr v-for="t in turistas" :key="t.id">
-        <td>{{t.nombre}}</td>
-        <td>{{t.apellidoP}}</td>
-        <td>{{t.apellidoM}}</td>
-        <td>{{t.edad}}</td>
-        <td>{{t.sexo}}</td>
-        <td>{{t.gmail}}</td>
-        <td>{{t.clave}}</td>
-        
-        <td>  
-          <router-link class="green-text text-darken-4" style="font-family: 'Calistoga', cursive;" :to="{'name':'Editar', 'params':{'id':t.id}}">
-            <button class="btn green darken-4" style="border-radius:55%; background: url('img/FONDOS/linen.png'); font-family: 'Calistoga', cursive, ;">Editar</button> 
-          </router-link>
-        </td>
-        <td class="" style="margin:8%">
-         <br>
-              <a href="#" class="red-text text-darken-4" @click="eliminar(t.id)">Eliminar</a>
-        </td>
-      </tr>
-      <br><br>
-    </table>
+      <table style="margin:0 auto; width:700px; font-family: 'Calistoga', cursive;">
+        <tr class="green-text text-darken-4 table">
+          <th>Nombre</th>
+          <th>Apellido Paterno</th>
+          <th>Apellido Materno</th>
+          <th>Email</th>
+          <th>Contraseña</th>
+          <th>Confirmar Contraseña</th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr v-for="t in user" :key="t.id">
+          <td>{{t.nombre}}</td>
+          <td>{{t.apellidoPaterno}}</td>
+          <td>{{t.apellidoMaterno}}</td>
+          <td>{{t.email}}</td>
+          <td>{{t.pass}}</td>
+          <td>{{t.clave2}}</td>
+
+          <td>
+            <router-link
+              class="green-text text-darken-4 btn-floating"
+               style="border-radius:55%; background: url('img/FONDOS/linen.png'); font-family: 'Calistoga', cursive, ;"
+              :to="{'name':'Editar', 'params':{'id':t.id}}"
+            ><i class="material-icons">create</i></router-link>
+           </td>   
+          <td>
+            <a href="#" class="btn-floating red red-text text-darken-4" style="border-radius:55%; background: url('img/FONDOS/linen.png'); font-family: 'Calistoga', cursive, ;" @click="eliminar(t.id)"><i class="material-icons">delete</i></a>
+          </td>
+        </tr>
+        <br />
+        <br />
+      </table>
     </div>
-   <br>
+    <br />
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
-import { mapActions, mapState } from "vuex"
-import app from "../firebase"
+import Barra from "../components/Barra";
+import Footer from "../components/Footer";
+import { mapActions, mapState } from "vuex";
+import app from "../firebase";
 export default {
   name: "Perfil",
-  components: {},
+  components: {
+    Barra,
+    Footer
+  },
   data: () => ({
-    turista:{}
+    nombre: "",
+    apellidoPaterno: "",
+    apellidoMaterno: "",
+    email: "",
+    pass: "",
+    clave2: ""
+    
   }),
   methods: {
-    ...mapActions(["getTuristas"]),
-    
-    eliminar(id){
-      if(confirm("estas seguro de eliminar a este turista...")){
+    ...mapActions(["getUser"]),
+
+    eliminar(id) {
+      if (confirm("estas seguro de eliminar a este Turista...")) {
         app
-        .database()
-        .ref("turista")
-        .child(id).remove();
+          .database()
+          .ref("user")
+          .child(id)
+          .remove();
       }
     },
     guardar() {
       app
         .database()
-        .ref("turista")
+        .ref("user")
         .push({
           nombre: this.nombre,
-          apellidoP: this.apellidoP,
-          apellidoM: this.apellidoM,
-          edad: this.edad,
-          gmail: this.gmail,
-          sexo: this.sexo
-
+          apellidoPaterno: this.apellidoPaterno,
+          apellidoMaterno: this.apellidoMaterno,
+          email: this.email,
+          pass: this.pass,
+          clave2: this.clave2
         });
     }
   },
   computed: {
-    ...mapState(["turistas"])
+    ...mapState(["user"])
   },
   created() {
-    this.getTuristas();
+    this.getUser();
   }
 };
 </script>
-
-

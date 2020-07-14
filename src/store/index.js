@@ -1,157 +1,109 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-
 import app from '../firebase'
-
+import router from '../router/index'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    turistas: [{
-    }]
+    idRegion1: [],
+    user: [],
+    error: ""
   },
   mutations: {
-    setTuristas(state, value) {
-      state.turistas = value;
-      //console.log('TURISTAS',state.turistas);
+    setUser(state, value) {
+      state.user = value;
     },
-    setFaunas(state, value) {
-      state.faunas = value;
-      //console.log('FAUNA',state.faunas); 
+    setError(state, value) {
+      state.error = value;
     },
-    setFloras(state, value) {
-      state.floras = value;
-      //console.log('FLORA',state.floras); 
+    setRegion1(state, value) {
+      state.idRegion1 = value;
     },
-    setReservas(state, value) {
-      state.reservas = value;
-      //console.log('RESERVA',state.reservas); 
-    }
+
+
   },
   actions: {
-
     ///iniciar sesion
-    iniciarSesion({ commit }, user) {
-      app.auth().signInWithEmailAndPassword(user.email, user.pass)
-        .then(res => {
-          console.log(res.user)
-          commit.log(res.user)
-          commit("setUser", { email: res.user.email, uid: res.user.uid })
-          router.push({ name: 'Home' })
-        })
-        .catch(e => {
-          console.log(e.message)
-          commit("setError", e.message);
-        })
-    }, 
-    //cerrar sesion
-    cerrarSesion({ commit }) {
-      app.auth().signOut()
-        .then(res => {
-          console.log('adios')
-          router.push({ name: 'login' })
-        })
-        .catch(e => {
-          console.log(e);
-          commit('setError', e.message);
-        });
+    iniciarSesion({commit}, user){
+      app.auth().signInWithEmailAndPassword(user.email,user.pass)
+      .then((res) =>{
+          console.log(res.user);
+          commit("setUser", {email:res.user.email, uid:res.user.uid});
+          router.push({name:'Home'});
+       })
+      .catch((e) => {
+        console.log(e.message);
+        commit("setError", e.message);
+      })
     },
-
-    getTuristas({ commit }) {
-      const list = []
-      app.database().ref("turista").on("value", data => {
+    cerrarSesion({ commit }) {
+      app.auth().signOut().then((res) => {
+        console.log("Sesion Cerrada con Exito!!")
+        router.push({ name: 'Login' })
+      })
+        .catch((e) => {
+          console.log("Error de cierre de sesion");
+          commit("setError", e.message);
+        });
+    },    
+    getUser({ commit }) {
+      const list = [];
+      app.database().ref("user").on("value", (data) => {
         //limpiar la coleccion
         for (var i = list.length - 1; i >= 0; i--) {
           list.splice(i, 1);
         }
         //firebase
-        data.forEach(obj => {
+        data.forEach((obj) => {
           let t = obj.val()
-          t.id = obj.key
-          list.push(t);
-        })//seba arriba
-      })
+          t.id = obj.key;
+          list.push(t)
+        });
+      });
       //enviar la coleccion al mutation
-      commit('setTuristas', list)
+      commit("setUser", list);
     },
-    getFaunas({ commit }) {
-      console.log('get');
-      const list2 = []
-      app.database().ref("Fauna").on("value", data => {
-        //limpiar la coleccion
-        for (var i = list2.length - 1; i >= 0; i--) {
-          list2.splice(i, 1);
+    getRegion1({ commit }) {
+      const listaRegion1 = [];
+      app.database().ref("idRegion1").on("value", (data) => {
+        for (var i = listaRegion1.length - 1; i >= 0; i--) {
+          listaRegion1.splice(1, i);
         }
-        //firebase -.-
-        data.forEach(obj => {
-          let t = obj.val()
-          t.id = obj.key
-          list2.push(t);
-        })
-      })
-      commit('setFaunas', list2)
+        data.forEach((obj) => {
+          let Rg = obj.val()
+          Rg.id = obj.key
+          listaRegion1.push(Rg)
+        });
+      });
+      commit("setRegion1", listaRegion1);
     },
-    getFloras({ commit }) {
-      console.log('get');
-      const list3 = []
-      app.database().ref("Flora").on("value", data => {
-        //limpiar la coleccion
-        for (var i = list3.length - 1; i >= 0; i--) {
-          list3.splice(i, 1);
-        }
-        //firebase -.-
-        data.forEach(obj => {
-          let t = obj.val()
-          t.id = obj.key
-          list3.push(t);
-        })
-      })
-      commit('setFloras', list3)
+    comprobarUsuario({ commit }, user) {
+      if (user != null) {
+        commit("setUser", { email: user.email, uid: user.uid });
+      } else {
+        commit("setUser", null);
+      }
     },
-    getReservas({ commit }) {
-      console.log('get');
-      const list4 = []
-      // app.database().ref("ReservaFloraFauna").child('R1')
-      app.database().ref("Reserva").on("value", data => {
-        //limpiar la coleccion
-        for (var i = list4.length - 1; i >= 0; i--) {
-          list4.splice(i, 1);
-        }
-        //firebase -.-
-        data.forEach(obj => {
-          let t = obj.val()
-          t.id = obj.key
-          list4.push(t);
+    registroCuenta({ commit }, user) {
+      app.auth().createUserWithEmailAndPassword(user.email, user.pass)
+        .then((res) => {
+          app.database().ref("user")
+            .push({
+              uid: res.user.uid,
+              nombre: res.user.nombre,
+              email: res.user.email
+            });
+          console.log("Cuenta creada con Exito!!");
+          router.push({ name: "Login" });
         })
-      })
-      commit('setReservas', list4)
-    }
+        .catch((e) => {
+          console.log(e);
+          commit("setError", e.message);
+        });
+    },
+   
   },
   modules: {
   }
-})
-/**
-R1:{
-  animales:{
-    A1:{
-      nombre:'',
-    },
-    A2:{
-      nombre:''
-    }
-  },
-  faunas:{
-    F1:{
-      especie:'sad',
-      clima:
-    },
-    F2:{
-
-    }
-  }
-},
-*/
-//app.database().ref("ReservaFloraFanua").child("R1")
-
-//li.animales
-//li.faunas
+});

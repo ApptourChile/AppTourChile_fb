@@ -1,12 +1,12 @@
 const configMapa = {
     clickableIcons: true,
     streetViewControl: true,
-    panControlOptions: false,
+    panControlOptions: true,
     gestureHandling: "cooperative",
-    mapTypeControl: false,
-    zoom: 7,
-    minZoom: 3,
-    maxZoom: 12
+    mapTypeControl: true,
+    zoom: 9,
+    minZoom: 5,
+    maxZoom: 14
   };
    
   export {configMapa};

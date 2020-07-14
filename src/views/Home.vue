@@ -1,6 +1,7 @@
 <template>
-  <div class="/home">
+  <div id="app" class="/home">
     <!--------- slider-->
+    <Barra></Barra>
     <br />
     <br />
     <br />
@@ -69,7 +70,7 @@
             </a>
           </div>
         </div>
-        <div class="col l10 offset-l1" >
+        <div class="col l10 offset-l1">
           <div
             class="card-panel center green darken-4 z-depth-5"
             style="padding: 5%;border-radius: 30px; background: url('img/FONDOS/linen.png')"
@@ -91,7 +92,9 @@
             <button
               class="btn green"
               style="background: url('img/FONDOS/linen.png'); text-transform: none;"
-            ><router-link class="white-text" to="/reserva">Ver mas...</router-link></button>
+            >
+              <router-link class="white-text" to="/reserva">Ver mas...</router-link>
+            </button>
           </div>
         </div>
       </div>
@@ -99,7 +102,7 @@
 
     <div class="parallax-container">
       <div class="parallax">
-        <img src="../assets/img/textura3.jpg" />
+        <img class="activator" src="../assets/img/ICONOS/nico.jpg" />
       </div>
     </div>
     <br />
@@ -173,7 +176,9 @@
               <button
                 class="btn green"
                 style="background: url('img/FONDOS/linen.png'); text-transform: none;"
-              ><router-link class="white-text" to="/fauna">Ver mas...</router-link></button>
+              >
+                <router-link class="white-text" to="/fauna">Ver mas...</router-link>
+              </button>
             </div>
           </div>
         </div>
@@ -185,7 +190,7 @@
 
     <div class="parallax-container">
       <div class="parallax">
-        <img src="../assets/img/textura4.jpg" />
+        <img src="@/assets/img/textura4.jpg" />
       </div>
     </div>
     <br />
@@ -234,7 +239,9 @@
                 <button
                   class="btn green"
                   style="background: url('img/FONDOS/linen.png'); text-transform: none;"
-                ><router-link class="white-text" to="/flora">Ver mas...</router-link></button>
+                >
+                  <router-link class="white-text" to="/flora">Ver mas...</router-link>
+                </button>
               </div>
             </div>
           </div>
@@ -443,19 +450,19 @@
           <h3>Equipo de Trabajo</h3>
           <div class="divider"></div>
         </div>
-        <div class="col l10 offset-l1">
-          <div class="col l6">
+        <div class="col l4 offset-l4">
+          <div class="center">
             <div
               class="card-panel light z-depth-5"
-              style="border-radius: 30px; background: url('img/FONDOS/linen.png')"
+              style="widht:300px; border-radius: 30px; background: url('img/FONDOS/linen.png')"
             >
               <div class="card light-green-text text-darken-4">
                 <div class="card-image waves-effect waves-block waves-light">
                   <img
                     class="activator"
                     src="../assets/img/ICONOS/nico.jpg"
-                    width="300"
-                    height="300"
+                    width="200"
+                    height="250"
                   />
                 </div>
                 <div class="card-content center">
@@ -489,80 +496,11 @@
                       </div>
                       <div class="col l12 center">
                         <p class="black-text">
-                          Lorem ipsum dolor sit amet
-                          consectetur
-                          adipisicing
-                          elit.
-                          Culpa
-                          recusandae itaque cum
-                          ea
-                          porro cumque ratione eum soluta voluptate accusantium sint eligendi
-                          quisquam,
-                          nulla
-                          voluptatum fuga doloribus dolorum. Et, iste.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col l6">
-            <div
-              class="card-panel light z-depth-5"
-              style="border-radius: 30px; background: url('img/FONDOS/linen.png')"
-            >
-              <div class="card light-green-text text-darken-4">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img
-                    class="activator"
-                    src="../assets/img/ICONOS/telo.jpeg"
-                    width="300"
-                    height="300"
-                  />
-                </div>
-                <div class="card-content center">
-                  <span class="card-title activator">
-                    Eduardo Jorquera
-                    <i class="material-icons right">content_paste</i>
-                  </span>
-                  <p>
-                    <a href="#">Analista Informatico</a>
-                  </p>
-                </div>
-                <div
-                  class="card-reveal white center"
-                  style="background: url('img/FONDOS/linen.png')"
-                >
-                  <div class="row">
-                    <div class="col l12">
-                      <div class="col l1 center">
-                        <span class="card-title green-text text-darken-4">
-                          <i class="material-icons left black-text">reply</i>
-                        </span>
-                      </div>
-                      <div class="col l11 center">
-                        <span class="card-title green-text text-darken-4">
-                          <b>
-                            Eduardo
-                            Jorquera
-                          </b>
-                        </span>
-                      </div>
-                      <div class="col l12 center">
-                        <p class="black-text">
-                          Lorem ipsum dolor sit amet
-                          consectetur
-                          adipisicing
-                          elit.
-                          Culpa
-                          recusandae itaque cum
-                          ea
-                          porro cumque ratione eum soluta voluptate accusantium sint eligendi
-                          quisquam,
-                          nulla
-                          voluptatum fuga doloribus dolorum. Et, iste.
+                          Graduado de Analista Informatico en 
+                          el instituto nacional INACAP, el año 2020,
+                          creador de la aplicacion AppTourChile
+                          dedicada al area de turismo, gestionando y 
+                          entregando informacion relevante y actualizada.
                         </p>
                       </div>
                     </div>
@@ -584,6 +522,58 @@
         <img src="../assets/img/AVES/MARTINPESCADOR.jpg" class="responsive-img" />
       </div>
     </div>
+    <Footer></Footer>
   </div>
 </template>
+<script>
+import app from "../firebase";
+import Barra from "../components/Barra";
+import Footer from "../components/Footer";
+import { mapActions, mapState } from "vuex";
+export default {
+  name: "Editar",
+  data: () => ({
+    user: {}
+  }),
+  components: {
+    Barra,
+    Footer
+  },
+  methods: {
+    editar() {
+      app
+        .database()
+        .ref("user")
+        .child(this.$route.params.id)
+        .set(this.user);
+      this.$router.push({ name: "Perfil" });
+    },
+    carga() {
+      const ref = app
+        .database()
+        .ref("user")
+        .child(this.$route.params.id)
+        .on("value", snap => {
+          this.user = snap.val();
+        });
+    },
+    guardar() {
+      app
+        .database()
+        .ref("user")
+        .push({
+          nombre: this.nombre,
+          apellidoPaterno: this.apellidoPaterno,
+          apellidoMaterno: this.apellidoMaterno,
+          pass: this.pass,
+          email: this.email,
+          clave2: this.clave2
+        });
+    }
+  },
+  created() {
+    this.carga();
+  }
+};
+</script>
 

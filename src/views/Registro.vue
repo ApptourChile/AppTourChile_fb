@@ -1,130 +1,145 @@
 <template>
-  <div class="registro">
+  <div class="">
+    <nav
+      class="navbar-wraper light-grey"
+      style="background: url('img/FONDOS/linen.png'); font-family: 'Calistoga', cursive;"
+    >
+      <div class="nav-wrapper">
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li>
+            <router-link to="/" class="green-text text-darken-4 brand-logo center">
+              <img src="img/ICONOS/logo_app.png" height="130" width="140" />
+            </router-link>
+          </li>
+          <li>
+            <router-link to="/" class="green-text text-darken-4 right">
+              <i class="green-text text-darken-4 material-icons right">account_circle</i>
+              <b>
+                Login
+                <!--Reserva Nacional-->
+              </b>
+            </router-link>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <br />
     <br />
     <br />
-    <div class="row center">
-      <div class="container">
-       
-        <div class="col l6 offset-l3">
-          <div
-            class="card-panel light z-depth-5"
-            style="padding:5%;background: url('img/FONDOS/linen.png'); border-radius:15%; width:500px; heigth:600px"
-          >
-            <h3 class="green-text text-darken-4">Registrate!</h3>
-            <form @submit.prevent="guardar()" style="margin:0 auto; width:300px;">
-              <input
+    <div class="row">
+      <div class="col l6 offset-l3">
+        <div
+          class="card-panel light z-depth-5 center"
+          style="padding:5%;background: url('img/FONDOS/linen.png'); border-radius:10%;"
+        >
+          <h1 class="green-text text-darken-4">Registro</h1>
+      
+          <form @submit.prevent="guardarUser">
+            <label class="green-text text-darken-4 left" for="first_name">
+              <b>Nombre</b>
+            </label>
+            <input type="text" placeholder="Nombre" v-model="nombre" />
+            <br />
+            <label class="green-text text-darken-4 left" for="first_name">
+              <b>Apellido Paterno</b>
+            </label>
+            <input type="text" placeholder="Apellido P." v-model="apellidoPaterno" />
+            <br />
+            <label class="green-text text-darken-4 left" for="first_name">
+              <b>Apellido Paterno</b>
+            </label>
+            <input type="text" placeholder="Apellido M." v-model="apellidoMaterno" />
+            <br />
+            <label class="green-text text-darken-4 left" for="first_name">
+              <b>Email</b>
+            </label>
+            <input type="text" placeholder="Email" v-model="email" />
+            <br />
+            <label class="green-text text-darken-4 left" for="first_name">
+              <b>Contraseña</b>
+            </label>
+            <input type="password" placeholder="Clave" v-model="pass" />
+            <br />
+            <label class="green-text text-darken-4 left" for="first_name">
+              <b>Validar Contraseña</b>
+            </label>
+            <input type="password" placeholder="Clave Confirmacion" v-model="clave2" />
+            <br />
+            <br />
+            <button class="btn green darken-4">Guardar</button>
+            <br>
+          </form>
+        
+          <div class="col l12">
+            <p class="black-text" style="text-transform: none;font-family: 'Calistoga', cursive;">
+              Para Iniciar Sesion presiona
+              <router-link
+                to="/"
                 class="green-text text-darken-4"
-                style="font-family: 'Calistoga', cursive;"
-                type="text"
-                v-model="nombre"
-                placeholder="Nombre"
-              />
-              <br />
-              <input
-                class="green-text text-darken-4"
-                style="font-family: 'Calistoga', cursive;"
-                type="text"
-                v-model="apellidoP"
-                placeholder="Apellido paterno"
-              />
-              <br />
-              <input
-                class="green-text text-darken-4"
-                style="font-family: 'Calistoga', cursive;"
-                type="text"
-                v-model="apellidoM"
-                placeholder="Apellido materno"
-              />
-              <br />
-              <input
-                class="green-text text-darken-4"
-                style="font-family: 'Calistoga', cursive;"
-                type="number"
-                v-model="edad"
-                placeholder="Edad"
-              />
-              <br />
-              <span class="white-text" style="font-family: 'Calistoga', cursive;">Sexo:</span>
-              <p>
-                <label>
-                  <input v-model="sexo" class="with-gap" name="group1" type="radio" checked />
-                  <span class="white-text" style="font-family: 'Calistoga', cursive;">Mujer</span>
-                </label>
-
-                <label>
-                  <input v-model="sexo" class="with-gap" name="group1" type="radio" />
-                  <span class="white-text" style="font-family: 'Calistoga', cursive;">Hombre</span>
-                </label>
-              </p>
-              <input
-                class="green-text text-darken-4"
-                style="font-family: 'Calistoga', cursive;"
-                type="text"
-                v-model="gmail"
-                placeholder="Gmail"
-              />
-              <br />
-              <input
-                class="green-text text-darken-4"
-                style="font-family: 'Calistoga', cursive;"
-                type="password"
-                v-model="clave"
-                placeholder="Clave"
-              />
-
-              <br />
-
-              <br />
-              <button
-                class="btn green darken-4"
-                style="background: url('img/FONDOS/linen.png'); text-transform: none;font-family: 'Calistoga', cursive;"
-              >Guardar</button>
-            </form>
+                style="text-transform: none;font-family: 'Calistoga', cursive;"
+              >Aquí!</router-link>
+            </p>
           </div>
+          <br />
         </div>
       </div>
     </div>
+    <Footer></Footer>
   </div>
 </template>
 
 
 <script>
-import { mapActions, mapState } from "vuex"
-import app from "../firebase"
+import { mapActions, mapState } from "vuex";
+import Barra from "../components/Barra";
+import Footer from "../components/Footer";
+import app from "../firebase";
 export default {
   name: "Registro",
   components: {
+    Footer
   },
   data: () => ({
     nombre: "",
-    apellidoP: "",
-    apellidoM: "",
-    edad: 0,
-    gmail: "",
-    sexo: ""
+    apellidoPaterno: "",
+    apellidoMaterno: "",
+    email: "",
+    pass: "",
+    clave2: ""
   }),
   methods: {
-    ...mapActions(["getTuristas"]),
-    guardar() {
-      app //ESTO NO ES UN GET ES UN PUSH AQUI ESTAS GUARDANDO INFOMRACIÒN EN LA DATABASE
+    ...mapActions(["registraCuenta"]),
+     ...mapActions(["getUser"]),
+      ...mapActions(["getError"]),
+    guardarUser() {
+      app
         .database()
-        .ref("turista")
+        .ref("user")
         .push({
           nombre: this.nombre,
-          apellidoP: this.apellidoP,
-          apellidoM: this.apellidoM,
-          edad: this.edad,
-          gmail: this.gmail,
-          sexo: this.sexo
+          apellidoPaterno: this.apellidoPaterno,
+          apellidoMaterno: this.apellidoMaterno,
+          email: this.email,
+          pass: this.pass,
+          clave2: this.clave2
         });
+        this.$router.push({ name: "Login" });
+    },
+    crear() {
+      this.registraCuenta({
+        //validar claves iguales
+        nombre: this.nombre,
+        apellidoPaterno: this.apellidoPaterno,
+        apellidoMaterno: this.apellidoMaterno,
+        email: this.email,
+        pass: this.pass,
+        clave2: this.clave2
+      });
     }
   },
   computed: {
-    ...mapState(["turistas"])
-  },
-  created() {
-    this.getTuristas();
+        ...mapState(["user"]),
+        ...mapState(["error"]),
   }
 };
 </script>

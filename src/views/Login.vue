@@ -1,5 +1,29 @@
 <template>
-  <div class="login">
+  <div id="app" class="/">
+    <nav
+      class="navbar-wraper light-grey"
+      style="background: url('img/FONDOS/linen.png'); font-family: 'Calistoga', cursive;"
+    >
+      <div class="nav-wrapper">
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li>
+            <router-link to="/" class="green-text text-darken-4 brand-logo center">
+              <img src="img/ICONOS/logo_app.png" height="130" width="140" />
+            </router-link>
+          </li>
+          <li>
+            <router-link to="/registro" class="green-text text-darken-4 right">
+              <i class="green-text text-darken-4 material-icons right">person_add</i>
+              <b>
+                Registro
+                <!--Reserva Nacional-->
+              </b>
+            </router-link>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
     <br />
     <br />
     <br />
@@ -9,16 +33,19 @@
           class="card-panel light z-depth-5 center"
           style="padding:5%;background: url('img/FONDOS/linen.png'); border-radius:10%;"
         >
-        <h3 class="green-text text-darken-4"
-              style="font-family: 'Calistoga', cursive;">Iniciar Sesion</h3>
+          <h3
+            class="green-text text-darken-4"
+            style="font-family: 'Calistoga', cursive;"
+          >Iniciar Sesion</h3>
           <form @submit.prevent="signIn" class="center" style="padding: 10%">
-            <input
+            <label class="green-text text-darken-4 left" for="first_name"><b>Email</b></label><input
               class="green-text text-darken-4"
               style="font-family: 'Calistoga', cursive;"
               type="text"
               placeholder="Mail"
               v-model="email"
             />
+            <label class="green-text text-darken-4 left" for="first_name"><b>Contraseña</b></label>
             <input
               class="green-text text-darken-4"
               style="font-family: 'Calistoga', cursive;"
@@ -26,18 +53,37 @@
               placeholder="Contraseña"
               v-model="pass"
             />
-
-            
+            <div>
+              <br />
+              <button
+                class="btn green darken-4 center"
+                style="background: url('img/FONDOS/linen.png'); text-transform: none;font-family: 'Calistoga', cursive;"
+              >Entrar!</button>
+              
+            </div>
+            <br />
+            <br />
+            <div class="col l12">
+              <p style="text-transform: none; font-family: 'Calistoga', cursive;">
+                Para registrarte presiona
+                <router-link
+                  to="/registro"
+                  class="green-text text-darken-4"
+                  style="text-transform: none; font-family: 'Calistoga', cursive;"
+                >Aquí!</router-link>
+              </p>
+              <br>
+              
+            </div>
+            <br />
           </form>
-          <button
-              class="btn green darken-4 center"
-              style="background: url('img/FONDOS/linen.png'); text-transform: none;font-family: 'Calistoga', cursive;"
-            >Entrar!</button>
+          
         </div>
       </div>
     </div>
   </div>
 </template>
+
 <script>
 import { mapActions, mapState } from "vuex";
 
@@ -45,19 +91,21 @@ export default {
   name: "Login",
   data: () => ({
     email: "",
-    pass: ""
+    pass: "",
+    error:""
   }),
   methods: {
-    ...mapActions(["iniciarSesion"]),
+    ...mapActions(['iniciarSesion']),
     signIn() {
       this.iniciarSesion({
-        email: this.email,
-        pass: this.pass
+        email:this.email,
+        pass:this.pass
       });
     }
   },
   computed: {
-    ...mapState(["user"])
+    ...mapState(['User']),
+    ...mapState(['Error']),
   }
 };
 </script>
