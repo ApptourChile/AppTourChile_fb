@@ -1,6 +1,6 @@
 <template>
   <div class="editar">
-    <Barra id="app"></Barra>
+    <Barra></Barra>
     <br />
     <br />
     <br />

@@ -6,9 +6,9 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    idRegion1: [],
-    user: [],
-    error: ""
+    Regiones: [],
+    user: '',
+    error: ''
   },
   mutations: {
     setUser(state, value) {
@@ -17,25 +17,26 @@ export default new Vuex.Store({
     setError(state, value) {
       state.error = value;
     },
-    setRegion1(state, value) {
-      state.idRegion1 = value;
+    setRegiones(state, value) {
+      state.Regiones = value;
+      console.log(state.Regiones);
     },
 
 
   },
   actions: {
     ///iniciar sesion
-    iniciarSesion({commit}, user){
-      app.auth().signInWithEmailAndPassword(user.email,user.pass)
-      .then((res) =>{
+    iniciarSesion({ commit }, user) {
+      app.auth().signInWithEmailAndPassword(user.email, user.pass)
+        .then((res) => {
           console.log(res.user);
-          commit("setUser", {email:res.user.email, uid:res.user.uid});
-          router.push({name:'Home'});
-       })
-      .catch((e) => {
-        console.log(e.message);
-        commit("setError", e.message);
-      })
+          commit("setUser", { email: res.user.email, uid: res.user.uid });
+          router.push({ name: 'Home' });
+        })
+        .catch((e) => {
+          console.log(e.message);
+          commit("setError", e.message);
+        })
     },
     cerrarSesion({ commit }) {
       app.auth().signOut().then((res) => {
@@ -46,7 +47,7 @@ export default new Vuex.Store({
           console.log("Error de cierre de sesion");
           commit("setError", e.message);
         });
-    },    
+    },
     getUser({ commit }) {
       const list = [];
       app.database().ref("user").on("value", (data) => {
@@ -64,19 +65,19 @@ export default new Vuex.Store({
       //enviar la coleccion al mutation
       commit("setUser", list);
     },
-    getRegion1({ commit }) {
-      const listaRegion1 = [];
-      app.database().ref("idRegion1").on("value", (data) => {
-        for (var i = listaRegion1.length - 1; i >= 0; i--) {
-          listaRegion1.splice(1, i);
+    getRegiones({ commit }) {
+      const listaRegiones = [];
+      app.database().ref("Regiones").on("value", (data) => {
+        for (var i = listaRegiones.length - 1; i >= 0; i--) {
+          listaRegiones.splice(1, i);
         }
         data.forEach((obj) => {
-          let Rg = obj.val()
-          Rg.id = obj.key
-          listaRegion1.push(Rg)
+          let Rg = obj.val();
+          Rg.id = obj.key;
+          listaRegiones.push(Rg);
         });
       });
-      commit("setRegion1", listaRegion1);
+      commit('setRegiones', listaRegiones);
     },
     comprobarUsuario({ commit }, user) {
       if (user != null) {
@@ -92,7 +93,7 @@ export default new Vuex.Store({
             .push({
               uid: res.user.uid,
               nombre: res.user.nombre,
-              email: res.user.email
+              email: res.user.email,
             });
           console.log("Cuenta creada con Exito!!");
           router.push({ name: "Login" });
@@ -102,8 +103,10 @@ export default new Vuex.Store({
           commit("setError", e.message);
         });
     },
-   
+
   },
   modules: {
-  }
+  },
+
+
 });

@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <Barra></Barra>
     <br />
     <br />
@@ -9,12 +9,15 @@
       style="border-radius:15%; background: url('img/FONDOS/linen.png'); font-family: 'Calistoga', cursive;"
     >
       <br />
+      
       <h3 class="green-text text-darken-4">Reservas Nacionales de Chile</h3>
         <table
           class="green-text text-darken-4"
           style="margin:0 auto; width:750px; font-family: 'Calistoga', cursive;"
         >
-          <tr v-for="rs in idRegion1" :key="rs.id" class="center">
+
+          <tr v-for="RG in Regiones" :key="RG.id" class="center">
+            
             <div class="col l4 offset-l1">
               <div
               
@@ -28,13 +31,13 @@
                   <div class="card-content center">
                     <span class="card-title activator">
                       <i class="material-icons">nature_people</i>
-                      {{rs.Reservas.idReserva.infoReserva.nombreReserva}}
+                      <td>{{Regiones}}</td>
                     </span>
                     <p>
                       Longitud:
-                      {{rs.Reservas.idReserva.infoReserva.longitud}}|
+                      <!--{{rs.Reservas.idReserva.infoReserva.longitud}}|
                       Latitud:
-                      {{rs.Reservas.idReserva.infoReserva.latitud}}
+                      {{rs.Reservas.idReserva.infoReserva.latitud}}--->
                       
                       
                     </p>
@@ -54,11 +57,11 @@
                       </div>
                       <div class="col l12 center">
                         <span class="card-title green-text text-darken-4">
-                          <h5>{{rs.Reservas.idReserva.infoReserva.nombreReserva}}</h5>
+                        <!---  <h5>{{rs.Reservas.idReserva.infoReserva.nombreReserva}}</h5>-->
                         </span>
                       </div>
                       <div class="col l12 center">
-                        <h6>Descripcion:</h6>
+                        <!---<h6>Descripcion:</h6>
                         <p class="black-text">{{rs.Reservas.idReserva.infoReserva.descripcionReserva}}</p>
                         <h6>Tarifas:</h6>
                         <p class="black-text">{{rs.Reservas.idReserva.infoReserva.tarifas}}</p>
@@ -67,7 +70,7 @@
                         <h6>Foto 1:</h6>
                         <p class="black-text">{{rs.Reservas.idReserva.infoReserva.foto1Reserva}}</p>
                         <h6>Foto 2:</h6>
-                        <p class="black-text">{{rs.Reservas.idReserva.infoReserva.foto2Reserva}}</p>
+                        <p class="black-text">{{rs.Reservas.idReserva.infoReserva.foto2Reserva}}</p>-->
                       </div>
                     </div>
                   </div>
@@ -121,13 +124,13 @@ export default {
     foto2Fauna:""
   }),
   methods: {
-    ...mapActions(["getRegion1"]),
+    ...mapActions(["getRegiones"]),
   },
   computed: {
-    ...mapState(["idRegion1"]),
+    ...mapState(["idRegiones"]),
   },
   created() {
-    this.getRegion1();
+    this.getRegiones();
   }
 };
 </scripts>

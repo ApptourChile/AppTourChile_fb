@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class>
     <nav
       class="navbar-wraper light-grey"
       style="background: url('img/FONDOS/linen.png'); font-family: 'Calistoga', cursive;"
@@ -33,43 +33,44 @@
           style="padding:5%;background: url('img/FONDOS/linen.png'); border-radius:10%;"
         >
           <h1 class="green-text text-darken-4">Registro</h1>
-      
-          <form @submit.prevent="guardarUser">
-            <label class="green-text text-darken-4 left" for="first_name">
-              <b>Nombre</b>
-            </label>
-            <input type="text" placeholder="Nombre" v-model="nombre" />
-            <br />
-            <label class="green-text text-darken-4 left" for="first_name">
-              <b>Apellido Paterno</b>
-            </label>
-            <input type="text" placeholder="Apellido P." v-model="apellidoPaterno" />
-            <br />
-            <label class="green-text text-darken-4 left" for="first_name">
-              <b>Apellido Paterno</b>
-            </label>
-            <input type="text" placeholder="Apellido M." v-model="apellidoMaterno" />
-            <br />
-            <label class="green-text text-darken-4 left" for="first_name">
-              <b>Email</b>
-            </label>
-            <input type="text" placeholder="Email" v-model="email" />
-            <br />
-            <label class="green-text text-darken-4 left" for="first_name">
-              <b>Contraseña</b>
-            </label>
-            <input type="password" placeholder="Clave" v-model="pass" />
-            <br />
-            <label class="green-text text-darken-4 left" for="first_name">
-              <b>Validar Contraseña</b>
-            </label>
-            <input type="password" placeholder="Clave Confirmacion" v-model="clave2" />
-            <br />
-            <br />
-            <button class="btn green darken-4">Guardar</button>
-            <br>
-          </form>
-        
+
+       
+            <form @submit.prevent="crear">
+              <label class="green-text text-darken-4 left" for="first_name">
+                <b>Nombre</b>
+              </label>
+              <input type="text" placeholder="Nombre" v-model="nombre" />
+              <br />
+              <label class="green-text text-darken-4 left" for="first_name">
+                <b>Apellido Paterno</b>
+              </label>
+              <input type="text" placeholder="Apellido P." v-model="apellidoPaterno" />
+              <br />
+              <label class="green-text text-darken-4 left" for="first_name">
+                <b>Apellido Paterno</b>
+              </label>
+              <input type="text" placeholder="Apellido M." v-model="apellidoMaterno" />
+              <br />
+              <label class="green-text text-darken-4 left" for="first_name">
+                <b>Email</b>
+              </label>
+              <input type="text" placeholder="Email" v-model="email" />
+              <br />
+              <label class="green-text text-darken-4 left" for="first_name">
+                <b>Contraseña</b>
+              </label>
+              <input type="password" placeholder="Clave" v-model="pass" />
+              <br />
+              <label class="green-text text-darken-4 left" for="first_name">
+                <b>Validar Contraseña</b>
+              </label>
+              <input type="password" placeholder="Clave Confirmacion" v-model="clave2" />
+              <br />
+              <br />
+              <button class="btn green darken-4" @submit.prevent="guardarUser">Guardar</button>
+              <br />
+            </form>
+
           <div class="col l12">
             <p class="black-text" style="text-transform: none;font-family: 'Calistoga', cursive;">
               Para Iniciar Sesion presiona
@@ -108,9 +109,11 @@ export default {
     clave2: ""
   }),
   methods: {
-    ...mapActions(["registraCuenta"]),
-     ...mapActions(["getUser"]),
-      ...mapActions(["getError"]),
+    ...mapActions(["registroCuenta"]),
+    ...mapActions(["getUser"]),
+    ...mapActions(["getError"]),
+    //guarda en base de datos no registra user
+
     guardarUser() {
       app
         .database()
@@ -123,10 +126,9 @@ export default {
           pass: this.pass,
           clave2: this.clave2
         });
-        this.$router.push({ name: "Login" });
     },
     crear() {
-      this.registraCuenta({
+      this.registroCuenta({
         //validar claves iguales
         nombre: this.nombre,
         apellidoPaterno: this.apellidoPaterno,
@@ -135,11 +137,12 @@ export default {
         pass: this.pass,
         clave2: this.clave2
       });
+      this.$router.push({ name: "Login" });
     }
   },
   computed: {
-        ...mapState(["user"]),
-        ...mapState(["error"]),
+    ...mapState(["user"]),
+    ...mapState(["error"])
   }
 };
 </script>

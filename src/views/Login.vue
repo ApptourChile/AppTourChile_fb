@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="/">
+  <div class="/">
     <nav
       class="navbar-wraper light-grey"
       style="background: url('img/FONDOS/linen.png'); font-family: 'Calistoga', cursive;"

@@ -13,73 +13,8 @@
     <link href="https://fonts.googleapis.com/css?family=Faster+One&display=swap" rel="stylesheet">
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.parallax');
-            var instances = M.Parallax.init(elems);
-
-        });
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.slider');
-            var instances = M.Slider.init(elems, {
-                height: 360,
-                indicators: true,
-                interval: 2000
-            });
-
-        });
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.carousel');
-            var instances = M.Carousel.init(elems, {
-                fullWidth: true,
-                dist: -200,
-                indicators: true,
-                height: 200
 
 
-            });
-
-
-        });
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.datepicker');
-            var instances = M.Datepicker.init(elems, {
-
-            });
-        });
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.timepicker');
-            var instances = M.Timepicker.init(elems, {
-
-            });
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.collapsible');
-            var instances = M.Collapsible.init(elems, {
-            });
-        });
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.materialboxed');
-            var instances = M.Materialbox.init(elems);
-        });
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.fixed-action-btn');
-            var instances = M.FloatingActionButton.init(elems, {
-                direction: 'up'
-            });
-        });
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.sidenav');
-            var instances = M.Sidenav.init(elems, {              
-
-            }); 
-            
-
-        });
-
-    </script>
 
 
 </head>
@@ -95,7 +30,8 @@
     </div>
     <!-- built files will be auto injected -->
 
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>  M.AutoInit(); </script>
 </body>
 
 </html>

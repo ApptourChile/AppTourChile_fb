@@ -1,5 +1,5 @@
-<template>
-  <div id="app" class="/home">
+<template id="app">
+  <div class="/home">
     <!--------- slider-->
     <Barra></Barra>
     <br />
@@ -496,10 +496,10 @@
                       </div>
                       <div class="col l12 center">
                         <p class="black-text">
-                          Graduado de Analista Informatico en 
+                          Graduado de Analista Informatico en
                           el instituto nacional INACAP, el año 2020,
                           creador de la aplicacion AppTourChile
-                          dedicada al area de turismo, gestionando y 
+                          dedicada al area de turismo, gestionando y
                           entregando informacion relevante y actualizada.
                         </p>
                       </div>
@@ -573,6 +573,9 @@ export default {
   },
   created() {
     this.carga();
+  },
+  mounted() {
+    
   }
 };
 </script>
