@@ -2,9 +2,13 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
+import "materialize-css";
+import "materialize-css/dist/css/materialize.css";
+
+
 const app = require("firebase/app"); 
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 //este pagina se encarga de poder realizar la carga de nuestra pagina 
 
 app.auth().onAuthStateChanged((user)=>{
@@ -19,8 +23,8 @@ app.auth().onAuthStateChanged((user)=>{
   new Vue({
     router,
     store,
-    render: (h) => h(App)
-  }).$mount('#app');
+    render: (h) => h(App),
+  }).$mount("#app");
   
 });
 
