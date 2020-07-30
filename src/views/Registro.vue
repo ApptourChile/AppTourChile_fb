@@ -67,18 +67,22 @@
               <input type="password" placeholder="Clave Confirmacion" v-model="clave2" />
               <br />
               <br />
-              <button class="btn green darken-4" @submit.prevent="guardarUser">Guardar</button>
+              <button class="btn green darken-4"><router-link
+                to="/"
+                class="white-text text-darken-4"
+                style="text-transform: none;font-family: 'Calistoga', cursive;"
+              >Guardar</router-link></button>
               <br />
             </form>
 
           <div class="col l12">
             <p class="black-text" style="text-transform: none;font-family: 'Calistoga', cursive;">
               Para Iniciar Sesion presiona
-              <router-link
-                to="/"
+              <router-link to="/login"
+                @submit.prevent="crear"
                 class="green-text text-darken-4"
                 style="text-transform: none;font-family: 'Calistoga', cursive;"
-              >Aquí!</router-link>
+              ></router-link>
             </p>
           </div>
           <br />
@@ -174,12 +178,9 @@ export default {
         direction: "up",
       });
       var elems = document.querySelectorAll(".sidenav");
-      var instances = M.Sidenav.init(elems, {});
-    
-    
+      var instances = M.Sidenav.init(elems, {});  
       var elems = document.querySelectorAll("select");
-      var instances = M.FormSelect.init(elems, {});
-    
+      var instances = M.FormSelect.init(elems, {});    
   },
 };
 </script>

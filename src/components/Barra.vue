@@ -72,7 +72,7 @@
       <ul>
         <li>
           <router-link
-            to="/perfil"
+            to="/reserva"
             class="btn-floating red"
             style="background: url('../img/FONDOS/linen.png')"
           >
@@ -99,7 +99,7 @@
         </li>
         <li>
           <router-link
-            to="/home"
+            to="/verMapa"
             class="btn-floating light-blue"
             style="background: url('../img/FONDOS/linen.png')"
           >

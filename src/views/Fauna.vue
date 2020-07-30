@@ -28,11 +28,11 @@
                   <div class="card-content center">
                     <span class="card-title activator">
                       <i class="material-icons">local_florist</i>
-                      {{fs.Reservas.idReserva.FAUNA.idFauna1.infoFauna.nombreFauna}}
+                      {{fs.Reservas.idReserva1.FAUNA.idFauna1.infoFauna1.nombreFauna}}
                     </span>
                     <p>
                       Nombre Cientifico:
-                      {{fs.Reservas.idReserva.FAUNA.idFauna1.infoFauna.cientificoFauna}}
+                      {{fs.Reservas.idReserva1.FAUNA.idFauna1.infoFauna1.cientificoFauna}}
                       <br />
                       
                     </p>
@@ -52,22 +52,205 @@
                       </div>
                       <div class="col l12 center">
                         <span class="card-title green-text text-darken-4">
-                          <h5>{{fs.Reservas.idReserva.FAUNA.idFauna1.infoFauna.nombreFauna}}</h5>
+                          <h5>{{fs.Reservas.idReserva1.FAUNA.idFauna1.infoFauna1.nombreFauna}}</h5>
                         </span>
                       </div>
                       <div class="col l12 center">
                         <h6>Descripcion:</h6>
-                        <p class="black-text">{{fs.Reservas.idReserva.FAUNA.idFauna1.infoFauna.descripcionFauna}}</p>
+                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna1.infoFauna1.descripcionFauna}}</p>
                         <h6>Habitat:</h6>
-                        <p class="black-text">{{fs.Reservas.idReserva.FAUNA.idFauna1.infoFauna.habitadFauna}}</p>
+                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna1.infoFauna1.habitadFauna}}</p>
                         <h6>Alimentacion:</h6>
-                        <p class="black-text">{{fs.Reservas.idReserva.FAUNA.idFauna1.infoFauna.alimentacionFauna}}</p>
+                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna1.infoFauna1.alimentacionFauna}}</p>
                         <h6>Conservacion:</h6>
-                        <p class="black-text">{{fs.Reservas.idReserva.FAUNA.idFauna1.infoFauna.conservacionFauna}}</p>
+                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna1.infoFauna1.conservacionFauna}}</p>
                         <h6>Foto 1:</h6>
-                        <p class="black-text">{{fs.Reservas.idReserva.FAUNA.idFauna1.infoFauna.foto1Fauna}}</p>
+                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna1.infoFauna1.foto1Fauna}}</p>
                         <h6>Foto 2:</h6>
-                        <p class="black-text">{{fs.Reservas.idReserva.FAUNA.idFauna1.infoFauna.foto2Fauna}}</p>
+                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna1.infoFauna1.foto2Fauna}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </tr>
+          <tr v-for="fs in idRegion1" :key="fs.id" class="center">
+            <div class="col l4 offset-l1">
+              <div
+              
+                class="card-panel light z-depth-5"
+                style="border-radius: 30px; background: url('img/FONDOS/linen.png')"
+              >
+                <div class="card light-green-text text-darken-4">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" width="345" height="250" />
+                  </div>
+                  <div class="card-content center">
+                    <span class="card-title activator">
+                      <i class="material-icons">local_florist</i>
+                      {{fs.Reservas.idReserva1.FAUNA.idFauna2.infoFauna2.nombreFauna}}
+                    </span>
+                    <p>
+                      Nombre Cientifico:
+                      {{fs.Reservas.idReserva1.FAUNA.idFauna2.infoFauna2.cientificoFauna}}
+                      <br />
+                      
+                    </p>
+                  </div>
+                  <div
+                    class="card-reveal white center"
+                    style="background: url('img/FONDOS/linen.png')"
+                  >
+                    <div class="row">
+                      <div class="col l12">
+                        <div class="col l1 center">
+                          <span class="card-title green-text text-darken-4">
+                            <i class="material-icons left black-text">reply</i>
+                          </span>
+                        </div>
+                        <div class="col l11"></div>
+                      </div>
+                      <div class="col l12 center">
+                        <span class="card-title green-text text-darken-4">
+                          <h5>{{fs.Reservas.idReserva1.FAUNA.idFauna2.infoFauna2.nombreFauna}}</h5>
+                        </span>
+                      </div>
+                      <div class="col l12 center">
+                        <h6>Descripcion:</h6>
+                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna2.infoFauna2.descripcionFauna}}</p>
+                        <h6>Habitat:</h6>
+                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna2.infoFauna2.habitadFauna}}</p>
+                        <h6>Alimentacion:</h6>
+                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna2.infoFauna2.alimentacionFauna}}</p>
+                        <h6>Conservacion:</h6>
+                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna2.infoFauna2.conservacionFauna}}</p>
+                        <h6>Foto 1:</h6>
+                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna2.infoFauna2.foto1Fauna}}</p>
+                        <h6>Foto 2:</h6>
+                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna2.infoFauna2.foto2Fauna}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </tr>
+          <tr v-for="fs in idRegion1" :key="fs.id" class="center">
+            <div class="col l4 offset-l1">
+              <div
+              
+                class="card-panel light z-depth-5"
+                style="border-radius: 30px; background: url('img/FONDOS/linen.png')"
+              >
+                <div class="card light-green-text text-darken-4">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" width="345" height="250" />
+                  </div>
+                  <div class="card-content center">
+                    <span class="card-title activator">
+                      <i class="material-icons">local_florist</i>
+                      {{fs.Reservas.idReserva1.FAUNA.idFauna3.infoFauna3.nombreFauna}}
+                    </span>
+                    <p>
+                      Nombre Cientifico:
+                      {{fs.Reservas.idReserva1.FAUNA.idFauna3.infoFauna3.cientificoFauna}}
+                      <br />
+                      
+                    </p>
+                  </div>
+                  <div
+                    class="card-reveal white center"
+                    style="background: url('img/FONDOS/linen.png')"
+                  >
+                    <div class="row">
+                      <div class="col l12">
+                        <div class="col l1 center">
+                          <span class="card-title green-text text-darken-4">
+                            <i class="material-icons left black-text">reply</i>
+                          </span>
+                        </div>
+                        <div class="col l11"></div>
+                      </div>
+                      <div class="col l12 center">
+                        <span class="card-title green-text text-darken-4">
+                          <h5>{{fs.Reservas.idReserva1.FAUNA.idFauna3.infoFauna3.nombreFauna}}</h5>
+                        </span>
+                      </div>
+                      <div class="col l12 center">
+                        <h6>Descripcion:</h6>
+                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna3.infoFauna3.descripcionFauna}}</p>
+                        <h6>Habitat:</h6>
+                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna3.infoFauna3.habitadFauna}}</p>
+                        <h6>Alimentacion:</h6>
+                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna3.infoFauna3.alimentacionFauna}}</p>
+                        <h6>Conservacion:</h6>
+                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna3.infoFauna3.conservacionFauna}}</p>
+                        <h6>Foto 1:</h6>
+                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna3.infoFauna3.foto1Fauna}}</p>
+                        <h6>Foto 2:</h6>
+                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna3.infoFauna3.foto2Fauna}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </tr>
+          <tr v-for="fs in idRegion1" :key="fs.id" class="center">
+            <div class="col l4 offset-l1">
+              <div
+              
+                class="card-panel light z-depth-5"
+                style="border-radius: 30px; background: url('img/FONDOS/linen.png')"
+              >
+                <div class="card light-green-text text-darken-4">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" width="345" height="250" />
+                  </div>
+                  <div class="card-content center">
+                    <span class="card-title activator">
+                      <i class="material-icons">local_florist</i>
+                      {{fs.Reservas.idReserva1.FAUNA.idFauna4.infoFauna4.nombreFauna}}
+                    </span>
+                    <p>
+                      Nombre Cientifico:
+                      {{fs.Reservas.idReserva1.FAUNA.idFauna4.infoFauna4.cientificoFauna}}
+                      <br />
+                      
+                    </p>
+                  </div>
+                  <div
+                    class="card-reveal white center"
+                    style="background: url('img/FONDOS/linen.png')"
+                  >
+                    <div class="row">
+                      <div class="col l12">
+                        <div class="col l1 center">
+                          <span class="card-title green-text text-darken-4">
+                            <i class="material-icons left black-text">reply</i>
+                          </span>
+                        </div>
+                        <div class="col l11"></div>
+                      </div>
+                      <div class="col l12 center">
+                        <span class="card-title green-text text-darken-4">
+                          <h5>{{fs.Reservas.idReserva1.FAUNA.idFauna4.infoFauna4.nombreFauna}}</h5>
+                        </span>
+                      </div>
+                      <div class="col l12 center">
+                        <h6>Descripcion:</h6>
+                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna4.infoFauna4.descripcionFauna}}</p>
+                        <h6>Habitat:</h6>
+                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna4.infoFauna4.habitadFauna}}</p>
+                        <h6>Alimentacion:</h6>
+                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna4.infoFauna4.alimentacionFauna}}</p>
+                        <h6>Conservacion:</h6>
+                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna4.infoFauna4.conservacionFauna}}</p>
+                        <h6>Foto 1:</h6>
+                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna4.infoFauna4.foto1Fauna}}</p>
+                        <h6>Foto 2:</h6>
+                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna4.infoFauna4.foto2Fauna}}</p>
                       </div>
                     </div>
                   </div>
@@ -104,11 +287,6 @@ export default {
     latitud: "",
     longitud: "",
     contacto:"",
-    cientificoFlora: "",
-    nombreFlora: "",
-    descripcionFlora: "",
-    foto1:"",
-    foto2:"",
     nombreFauna:"",
     descripcionFauna:"",
     cientificoFauna:"",

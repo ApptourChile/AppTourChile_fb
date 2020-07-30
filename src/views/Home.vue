@@ -102,7 +102,7 @@
 
     <div class="parallax-container">
       <div class="parallax">
-        <img class="activator" src="../assets/img/ICONOS/nico.jpg" />
+        <img class="activator" src="../assets/img/textura1.jpg" />
       </div>
     </div>
     <br />
@@ -190,7 +190,7 @@
 
     <div class="parallax-container">
       <div class="parallax">
-        <img src="@/assets/img/textura4.jpg" />
+        <img src="@/assets/img/textura2.jpg" />
       </div>
     </div>
     <br />
@@ -274,7 +274,7 @@
     <br />
     <div class="parallax-container">
       <div class="parallax">
-        <img src="../assets/img/textura2.jpg" class="responsive-img" />
+        <img src="../assets/img/textura3.jpg" class="responsive-img" />
       </div>
     </div>
     <br />
@@ -432,7 +432,7 @@
     <br />
     <div class="parallax-container">
       <div class="parallax">
-        <img src="../assets/img/textura1.jpg" class="responsive-img" />
+        <img src="../assets/img/textura5.jpg" class="responsive-img" />
       </div>
     </div>
     <br />
@@ -521,7 +521,7 @@
                   <div class="card-image waves-effect waves-block waves-light">
                     <img
                       class="activator"
-                      src="../assets/img/ICONOS/nico.jpg"
+                      src="../assets/img/ICONOS/telo.jpeg"
                       width="200"
                       height="250"
                     />
@@ -532,7 +532,7 @@
                       <i class="material-icons right">content_paste</i>
                     </span>
                     <p>
-                      <a href="#">Analista Informatico</a>
+                      <a href="#">Ingeniero Informatico</a>
                     </p>
                   </div>
                   <div

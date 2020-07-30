@@ -6,7 +6,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    Regiones: [],
+    idRegion1: '',
     user: '',
     error: ''
   },
@@ -17,9 +17,9 @@ export default new Vuex.Store({
     setError(state, value) {
       state.error = value;
     },
-    setRegiones(state, value) {
-      state.Regiones = value;
-      console.log(state.Regiones);
+    setRegion1(state, value) {
+      state.idRegion1 = value;
+      console.log(state.idRegion1);
     },
 
 
@@ -65,19 +65,19 @@ export default new Vuex.Store({
       //enviar la coleccion al mutation
       commit("setUser", list);
     },
-    getRegiones({ commit }) {
-      const listaRegiones = [];
-      app.database().ref("Regiones").on("value", (data) => {
-        for (var i = listaRegiones.length - 1; i >= 0; i--) {
-          listaRegiones.splice(1, i);
+    getRegion1({ commit }) {
+      const lista1 = [];
+      app.database().ref("idRegion1").on("value", (data) => {
+        for (var i = lista1.length - 1; i >= 0; i--) {
+          lista1.splice(1, i);
         }
         data.forEach((obj) => {
-          let Rg = obj.val();
-          Rg.id = obj.key;
-          listaRegiones.push(Rg);
+          let Rg1 = obj.val();
+          Rg1.id = obj.key;
+          lista1.push(Rg1);
         });
       });
-      commit('setRegiones', listaRegiones);
+      commit('setRegion1', lista1);
     },
     comprobarUsuario({ commit }, user) {
       if (user != null) {
