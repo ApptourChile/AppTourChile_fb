@@ -26,7 +26,7 @@
               <div class="col l4 centered">
                 <label class="green-text text-darken-4 left">Seleciona la Región</label>
                 <select>
-                  <option v-for="rs in idRegion1" :key="rs.id">{{rs.nombreRegion}}</option>
+                  <option v-for="rs in Regiones" :key="rs.id">{{rs.nombreRegion}}</option>
                 </select>
                
               </div>

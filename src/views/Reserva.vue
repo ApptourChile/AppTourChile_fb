@@ -23,7 +23,7 @@
             >
               <div class="card light-green-text text-darken-4">
                 <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" width="345" height="250" />
+                  <img src="../assets/img/RESERVASNACIONALES/2.jpg" class="responsive-img"/>
                 </div>
                 <div class="card-content center">
                   <span class="card-title activator">
@@ -63,7 +63,7 @@
                       <h6>Contacto:</h6>
                       <p class="black-text">{{sn.Reservas.idReserva1.infoReserva1.contacto}}</p>
                       <h6>Foto 1:</h6>
-                      <p class="black-text">{{sn.Reservas.idReserva1.infoReserva1.foto1Reserva}}</p>
+                      <p class="black-text"><img src="../assets/img/RESERVASNACIONALES/2.jpg" width="300" class="responsive-img"/></p>
                       <h6>Foto 2:</h6>
                       <p class="black-text">{{sn.Reservas.idReserva1.infoReserva1.foto2Reserva}}</p> 
                     </div>
@@ -81,12 +81,12 @@
             >
               <div class="card light-green-text text-darken-4">
                 <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" width="345" height="250" />
+                  <img src="../assets/img/RESERVASNACIONALES/3.jpg" class="responsive-img"/>
                 </div>
                 <div class="card-content center">
                   <span class="card-title activator">
                     <i class="material-icons">nature_people</i>
-                    {{sn.Reservas.idReserva2.infoReserva2}}
+                    {{sn}}
                   </span>
                   <p>
                    Longitud:
@@ -121,7 +121,7 @@
                       <h6>Contacto:</h6>
                       <p class="black-text">{{}}</p>
                       <h6>Foto 1:</h6>
-                      <p class="black-text">{{}}</p>
+                      <p class="black-text"><img src="../assets/img/RESERVASNACIONALES/2.jpg" width="300" class="responsive-img"/></p>
                       <h6>Foto 2:</h6>
                       <p class="black-text">{{}}</p> 
                     </div>

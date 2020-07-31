@@ -23,11 +23,11 @@
               >
                 <div class="card light-green-text text-darken-4">
                   <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" width="345" height="250" />
+                    <img src="../assets/img/MAMIFEROS/PUMA1.jpg" class="responsive-img"/>
                   </div>
                   <div class="card-content center">
                     <span class="card-title activator">
-                      <i class="material-icons">local_florist</i>
+                      <i class="material-icons">pets</i>
                       {{fs.Reservas.idReserva1.FAUNA.idFauna1.infoFauna1.nombreFauna}}
                     </span>
                     <p>
@@ -65,9 +65,9 @@
                         <h6>Conservacion:</h6>
                         <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna1.infoFauna1.conservacionFauna}}</p>
                         <h6>Foto 1:</h6>
-                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna1.infoFauna1.foto1Fauna}}</p>
+                        <p class="black-text"><img src="../assets/img/MAMIFEROS/PUMA.jpg" width="350" class="responsive-img"/></p>
                         <h6>Foto 2:</h6>
-                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna1.infoFauna1.foto2Fauna}}</p>
+                        <p class="black-text"><img src="../assets/img/MAMIFEROS/PUMA1.jpg" width="350" class="responsive-img"/></p>
                       </div>
                     </div>
                   </div>
@@ -84,12 +84,12 @@
               >
                 <div class="card light-green-text text-darken-4">
                   <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" width="345" height="250" />
+                    <img src="../assets/img/MAMIFEROS/HUEMUL.jpg" class="responsive-img"/>
                   </div>
                   <div class="card-content center">
                     <span class="card-title activator">
-                      <i class="material-icons">local_florist</i>
-                      {{fs.Reservas.idReserva1.FAUNA.idFauna2.infoFauna2.nombreFauna}}
+                      <i class="material-icons">pets</i>
+                      <!--{{fs.Reservas.idReserva1.FAUNA.idFauna2.infoFauna2.nombreFauna}}-->Huemul
                     </span>
                     <p>
                       Nombre Cientifico:
@@ -113,7 +113,7 @@
                       </div>
                       <div class="col l12 center">
                         <span class="card-title green-text text-darken-4">
-                          <h5>{{fs.Reservas.idReserva1.FAUNA.idFauna2.infoFauna2.nombreFauna}}</h5>
+                          <h5><!--{{fs.Reservas.idReserva1.FAUNA.idFauna2.infoFauna2.nombreFauna}}-->Huemul</h5>
                         </span>
                       </div>
                       <div class="col l12 center">
@@ -126,9 +126,7 @@
                         <h6>Conservacion:</h6>
                         <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna2.infoFauna2.conservacionFauna}}</p>
                         <h6>Foto 1:</h6>
-                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna2.infoFauna2.foto1Fauna}}</p>
-                        <h6>Foto 2:</h6>
-                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna2.infoFauna2.foto2Fauna}}</p>
+                        <p class="black-text"><img src="../assets/img/MAMIFEROS/HUEMUL.jpg" width="300" class="responsive-img"/></p>
                       </div>
                     </div>
                   </div>
@@ -145,11 +143,11 @@
               >
                 <div class="card light-green-text text-darken-4">
                   <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" width="345" height="250" />
+                    <img src="../assets/img/MAMIFEROS/ZORROCULPEO.jpg" class="responsive-img"/>
                   </div>
                   <div class="card-content center">
                     <span class="card-title activator">
-                      <i class="material-icons">local_florist</i>
+                      <i class="material-icons">pets</i>
                       {{fs.Reservas.idReserva1.FAUNA.idFauna3.infoFauna3.nombreFauna}}
                     </span>
                     <p>
@@ -187,7 +185,7 @@
                         <h6>Conservacion:</h6>
                         <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna3.infoFauna3.conservacionFauna}}</p>
                         <h6>Foto 1:</h6>
-                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna3.infoFauna3.foto1Fauna}}</p>
+                        <p class="black-text"><img src="../assets/img/MAMIFEROS/ZORROCULPEO.jpg" width="300" class="responsive-img"/></p>
                         <h6>Foto 2:</h6>
                         <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna3.infoFauna3.foto2Fauna}}</p>
                       </div>
@@ -206,12 +204,12 @@
               >
                 <div class="card light-green-text text-darken-4">
                   <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" width="345" height="250" />
+                    <img src="../assets/img/MAMIFEROS/MONITODEMONTE.jpg" class="responsive-img"/>
                   </div>
                   <div class="card-content center">
                     <span class="card-title activator">
-                      <i class="material-icons">local_florist</i>
-                      {{fs.Reservas.idReserva1.FAUNA.idFauna4.infoFauna4.nombreFauna}}
+                      <i class="material-icons">pets</i>
+                      <!--{{fs.Reservas.idReserva1.FAUNA.idFauna4.infoFauna4.nombreFauna}}-->Monito del Monte
                     </span>
                     <p>
                       Nombre Cientifico:
@@ -235,7 +233,7 @@
                       </div>
                       <div class="col l12 center">
                         <span class="card-title green-text text-darken-4">
-                          <h5>{{fs.Reservas.idReserva1.FAUNA.idFauna4.infoFauna4.nombreFauna}}</h5>
+                          <h5><!--{{fs.Reservas.idReserva1.FAUNA.idFauna4.infoFauna4.nombreFauna}}-->Monito del Monte</h5>
                         </span>
                       </div>
                       <div class="col l12 center">
@@ -248,7 +246,7 @@
                         <h6>Conservacion:</h6>
                         <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna4.infoFauna4.conservacionFauna}}</p>
                         <h6>Foto 1:</h6>
-                        <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna4.infoFauna4.foto1Fauna}}</p>
+                        <p class="black-text"><img src="../assets/img/MAMIFEROS/MONITODEMONTE.jpg" width="300" class="responsive-img"/></p>
                         <h6>Foto 2:</h6>
                         <p class="black-text">{{fs.Reservas.idReserva1.FAUNA.idFauna4.infoFauna4.foto2Fauna}}</p>
                       </div>

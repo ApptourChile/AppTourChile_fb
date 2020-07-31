@@ -68,7 +68,7 @@
               <br />
               <br />
               <button class="btn green darken-4"><router-link
-                to="/"
+              
                 class="white-text text-darken-4"
                 style="text-transform: none;font-family: 'Calistoga', cursive;"
               >Guardar</router-link></button>
@@ -181,6 +181,6 @@ export default {
       var instances = M.Sidenav.init(elems, {});  
       var elems = document.querySelectorAll("select");
       var instances = M.FormSelect.init(elems, {});    
-  },
+  }
 };
 </script>

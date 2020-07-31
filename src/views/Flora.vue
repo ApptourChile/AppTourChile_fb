@@ -22,7 +22,7 @@
             >
               <div class="card light-green-text text-darken-4">
                 <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" width="345" height="250" />
+                  <img src="../assets/img/FLORA/roble1.jpg" class="responsive" height="450" />
                 </div>
                 <div class="card-content center">
                   <span class="card-title activator">
@@ -58,7 +58,7 @@
                       <p class="black-text"
                       >{{fl.Reservas.idReserva1.FLORAS.idFlora1.infoFlora1.descripcionFlora}}</p>
                       <h6>Foto 1:</h6>
-                      <p class="black-text">{{fl.Reservas.idReserva1.FLORAS.idFlora1.infoFlora1.foto1}}</p>
+                      <p class="black-text"><img src="../assets/img/FLORA/roble1.jpg" class="responsive" height="350" width="200"/></p>
                       <h6>Foto 2:</h6>
                       <p class="black-text">{{fl.Reservas.idReserva1.FLORAS.idFlora1.infoFlora1.foto2}}</p>
                     </div>
@@ -76,12 +76,12 @@
             >
               <div class="card light-green-text text-darken-4">
                 <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" width="345" height="250" />
+                  <img src="../assets/img/FLORA/coigue.jpg" class="responsive" height="450" />
                 </div>
                 <div class="card-content center">
                   <span class="card-title activator">
                     <i class="material-icons">local_florist</i>
-                    {{fl.Reservas.idReserva2.FLORAS.idFlora1.infoFlora1.nombreFlora}}
+                    <!--{{fl.Reservas.idReserva2.FLORAS.idFlora1.infoFlora1.nombreFlora}}-->Coigue
                   </span>
                   <p>
                     Nombre Cientifico:
@@ -104,7 +104,7 @@
                     </div>
                     <div class="col l12 center">
                       <span class="card-title green-text text-darken-4">
-                      <h5>{{fl.Reservas.idReserva2.FLORAS.idFlora1.infoFlora1.nombreFlora}}</h5>
+                      <h5><!--{{fl.Reservas.idReserva2.FLORAS.idFlora1.infoFlora1.nombreFlora}}-->Coigue</h5>
                       </span>
                     </div>
                     <div class="col l12 center">
@@ -112,7 +112,7 @@
                       <p class="black-text"
                       >{{fl.Reservas.idReserva2.FLORAS.idFlora1.infoFlora1.descripcionFlora}}</p>
                       <h6>Foto 1:</h6>
-                      <p class="black-text">{{fl.Reservas.idReserva2.FLORAS.idFlora1.infoFlora1.foto1}}</p>
+                      <p class="black-text"><img src="../assets/img/FLORA/coigue.jpg" class="responsive" height="350" width="200"/></p>
                       <h6>Foto 2:</h6>
                       <p class="black-text">{{fl.Reservas.idReserva2.FLORAS.idFlora1.infoFlora1.foto2}}</p>
                     </div>
